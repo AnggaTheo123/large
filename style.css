@@ -1,59 +1,93 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* abu-abu muda background */
+  font-family: "Sono", sans-serif;
+  background-color: #f4f6f9;
   margin: 0;
-  height: 100vh; /* penuh tinggi layar */
+  padding: 0;
   display: flex;
-  justify-content: center;  /* center horizontal */
-  align-items: center;      /* center vertical */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Container horizontal */
 .pricing-container {
   display: flex;
-  gap: 20px; /* jarak antar card */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
 }
 
 /* Card */
 .pricing-plan {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  width: 300px;
   text-align: center;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  /* transition: transform 0.3s ease;   <-- HAPUS animasi */
 }
 
-/* Title & Price */
+/* Hilangkan efek hover */
+.pricing-plan:hover {
+  transform: none;
+}
+
 .plan-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .plan-price {
-  font-size: 22px;
-  color: #333;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #555;
 }
 
-/* Features */
 .plan-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0 0 25px 0;
+  flex-grow: 1;
 }
 
 .plan-features li {
-  margin: 6px 0;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #444;
 }
 
-/* Button */
 .plan-button {
-  background: orange;
-  color: white;
+  background: #007bff;
+  color: #fff;
   border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+}
+
+.plan-button:hover {
+  background: #0056b3;
+}
+
+/* RESPONSIVE: HP & Tablet */
+@media (max-width: 1024px) {
+  .pricing-container {
+    flex-direction: column;   /* jadi vertikal */
+  }
+
+  .pricing-plan {
+    width: 90%;               /* lebar penuh */
+    max-width: 400px;         /* batas biar gak terlalu besar */
+    margin: 0 auto;           /* center */
+  }
 }
