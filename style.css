@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* abu-abu muda background */
+  margin: 0;
+  height: 100vh; /* penuh tinggi layar */
+  display: flex;
+  justify-content: center;  /* center horizontal */
+  align-items: center;      /* center vertical */
+}
+
+/* Container horizontal */
+.pricing-container {
+  display: flex;
+  gap: 20px; /* jarak antar card */
+}
+
+/* Card */
+.pricing-plan {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+}
+
+/* Title & Price */
+.plan-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Features */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.plan-features li {
+  margin: 6px 0;
+}
+
+/* Button */
+.plan-button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
